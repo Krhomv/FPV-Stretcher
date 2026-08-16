@@ -1,0 +1,89 @@
+{
+	Tools = ordered() {
+		FPVStretcher = MacroOperator {
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Templates:\\Edit\\Effects\\Krhom's Shop\\"
+					}
+				},
+				Description = "Dynamic 4:3 to 16:9 SuperView Stretcher. Apply to an Adjustment Clip (Edit page) or directly to clips (Fusion page).",
+			},
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "Input",
+				},
+				Input0 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "SetupNotice",
+				},
+				Input1 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "WidescreenFill",
+					Default = 1,
+				},
+				Input2 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "VerticalCrop",
+					Default = 0.07,
+				},
+				Input3 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "TiltOffsetY",
+					Name = "Vertical Offset",
+					Default = 0,
+				},
+				Input4 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "CenterProtection",
+					Name = "Preserve Center",
+					Default = 0.85,
+				},
+				Input5 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "EdgeSqueeze",
+					Default = 2,
+				},
+				Input6 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "FisheyeCorrection",
+					Default = 0.4,
+				},
+				Input7 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "FilterQuality",
+					Default = 2,
+				},
+				Input8 = InstanceInput {
+					SourceOp = "FPVStretcher1",
+					Source = "EdgeDetailBoost",
+					Default = 0,
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "FPVStretcher1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				FPVStretcher1 = Fuse.FPVStretcher {
+					Inputs = {
+						WidescreenFill = Input { Value = 1, },
+						VerticalCrop = Input { Value = 0.07, },
+						TiltOffsetY = Input { Value = 0, },
+						CenterProtection = Input { Value = 0.85, },
+						EdgeSqueeze = Input { Value = 2, },
+						FisheyeCorrection = Input { Value = 0.4, },
+						FilterQuality = Input { Value = 2, },
+						EdgeDetailBoost = Input { Value = 0, },
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 0 } },
+				}
+			},
+		}
+	}
+}
