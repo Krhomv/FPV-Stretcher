@@ -27,28 +27,25 @@ Designed for FPV drones, action cameras (GoPro, DJI, Insta360, Walksnail, HDZero
 
 ## 📦 Installation
 
-### Option 1: One-Click Installer (Recommended)
-1. Download or locate [`FPV_Stretcher.drfx`](FPV_Stretcher.drfx).
-2. Double-click the `.drfx` file.
-3. DaVinci Resolve will prompt: **"Install FPV Stretcher?"** → Click **Install**.
-4. Restart DaVinci Resolve.
+> **Note on DaVinci Resolve Fuses:**
+> DaVinci Resolve's GPU kernel compiler requires `.fuse` files to be placed physically on disk in the `Fuses` folder (double-clicking a `.drfx` only installs Edit page templates, but does not unpack Fuses). Use any of the simple options below:
 
-### Option 2: Automated Script
-Run the included python script to build and install to your local Resolve directory:
-```bash
-python install.py
-```
+### Option 1: One-Click Script Installer (Easiest)
+- **Windows**: Double-click `install.bat`
+- **macOS / Linux**: Run `bash install.sh` (or `python3 install.py`)
 
-### Option 3: Manual Installation
-- Copy `FPV_Stretcher.fuse` to:
-  - **Windows**: `%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses\`
-  - **macOS**: `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Fuses/`
-  - **Linux**: `~/.local/share/DaVinciResolve/Fusion/Fuses/`
-- Copy `FPV_Stretcher.drfx` to:
-  - **Windows**: `%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\`
-  - **macOS**: `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Templates/`
-  - **Linux**: `~/.local/share/DaVinciResolve/Fusion/Templates/`
-- Restart DaVinci Resolve.
+*(This automatically copies both `FPV_Stretcher.fuse` and `FPV_Stretcher.drfx` to your local DaVinci Resolve support directories).*
+
+### Option 2: Manual Installation
+1. Copy **`FPV_Stretcher.fuse`** to the **`Fuses`** directory:
+   - **Windows**: `%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses\`
+   - **macOS**: `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Fuses/`
+   - **Linux**: `~/.local/share/DaVinciResolve/Fusion/Fuses/`
+2. Copy **`FPV_Stretcher.drfx`** (or double-click it) to the **`Templates`** directory:
+   - **Windows**: `%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Templates\`
+   - **macOS**: `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Templates/`
+   - **Linux**: `~/.local/share/DaVinciResolve/Fusion/Templates/`
+3. Restart DaVinci Resolve.
 
 ---
 
