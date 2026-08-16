@@ -646,10 +646,22 @@ local function runInstaller()
         return false
     end
 
+    -- 3. Attempt dynamic live registration in active Fusion runtime
+    local liveRegistered = false
+    if type(FuRegisterClass) == "function" then
+        local ok, err = pcall(function()
+            dofile(fuseFile)
+        end)
+        if ok then
+            liveRegistered = true
+            print("[+] Live registered FPV Stretcher into active Fusion session!")
+        end
+    end
+
     local msg = "FPV Stretcher has been installed successfully!\n\n" ..
-                "• Edit Page: Toolbox -> Effects -> Krhom's Shop -> FPV Stretcher\n" ..
-                "• Fusion Page: Shift+Space -> FPV Stretcher\n\n" ..
-                "Please RESTART DaVinci Resolve to complete installation."
+                "• Fusion Page: Immediately available via Shift+Space -> FPV Stretcher\n" ..
+                "• Edit Page: Available in Toolbox -> Effects -> Krhom's Shop (requires Restart)\n\n" ..
+                (liveRegistered and "Ready to use in Fusion right now! (Restart Resolve to see in Edit Toolbox)." or "Please restart DaVinci Resolve to complete installation.")
 
     print("\n" .. msg)
 
