@@ -343,7 +343,7 @@ function Create()
         InFisheyeCorrection = self:AddInput("Fisheye Correction", "FisheyeCorrection", {
             LINKID_DataType    = "Number",
             INPID_InputControl = "SliderControl",
-            INP_Default        = 0.4,
+            INP_Default        = 0.0,
             INP_MinAllowed     = 0.0,
             INP_MaxAllowed     = 1.0,
             INP_MinScale       = 0.0,

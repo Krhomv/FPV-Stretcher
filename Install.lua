@@ -351,7 +351,7 @@ function Create()
         InFisheyeCorrection = self:AddInput("Fisheye Correction", "FisheyeCorrection", {
             LINKID_DataType    = "Number",
             INPID_InputControl = "SliderControl",
-            INP_Default        = 0.4,
+            INP_Default        = 0.0,
             INP_MinAllowed     = 0.0,
             INP_MaxAllowed     = 1.0,
             INP_MinScale       = 0.0,
@@ -538,7 +538,7 @@ local SETTING_CODE = [===[
 				Input6 = InstanceInput {
 					SourceOp = "FPVStretcher1",
 					Source = "FisheyeCorrection",
-					Default = 0.4,
+					Default = 0,
 				},
 				Input7 = InstanceInput {
 					SourceOp = "FPVStretcher1",
@@ -566,7 +566,7 @@ local SETTING_CODE = [===[
 						TiltOffsetY = Input { Value = 0, },
 						CenterProtection = Input { Value = 0.85, },
 						EdgeSqueeze = Input { Value = 2, },
-						FisheyeCorrection = Input { Value = 0.4, },
+						FisheyeCorrection = Input { Value = 0, },
 						FilterQuality = Input { Value = 2, },
 						EdgeDetailBoost = Input { Value = 0, },
 					},

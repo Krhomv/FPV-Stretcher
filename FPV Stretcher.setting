@@ -49,7 +49,7 @@
 				Input6 = InstanceInput {
 					SourceOp = "FPVStretcher1",
 					Source = "FisheyeCorrection",
-					Default = 0.4,
+					Default = 0,
 				},
 				Input7 = InstanceInput {
 					SourceOp = "FPVStretcher1",
@@ -77,7 +77,7 @@
 						TiltOffsetY = Input { Value = 0, },
 						CenterProtection = Input { Value = 0.85, },
 						EdgeSqueeze = Input { Value = 2, },
-						FisheyeCorrection = Input { Value = 0.4, },
+						FisheyeCorrection = Input { Value = 0, },
 						FilterQuality = Input { Value = 2, },
 						EdgeDetailBoost = Input { Value = 0, },
 					},

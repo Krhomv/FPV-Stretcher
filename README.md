@@ -82,7 +82,7 @@ For users of [Reactor (We Suck Less)](https://www.steakunderwater.com/wesuckless
 | **Vertical Offset** | `-1.0 — +1.0` | `0.0` | Shifts vertical framing within the cropped headroom (useful for drone uptilt). |
 | **Preserve Center** | `0.0 — 1.0` | `0.85` | `1.0` enforces strict 1:1 round center geometry. `0.7 — 0.85` allows a subtle center stretch for smoother edge transitions. |
 | **Edge Squeeze** | `1.0 — 4.0` | `2.0` | Stretch curvature power exponent. `2.0` gives the classic action-cam look. |
-| **Fisheye Correction** | `0.0 — 1.0` | `0.40` | Straightens barrel distortion from wide-angle lenses with auto zoom-out. |
+| **Fisheye Correction** | `0.0 — 1.0` | `0.0` | Straightens barrel distortion from wide-angle lenses with auto zoom-out. |
 | **Filtering Quality** | Dropdown | `Catmull-Rom` | `Catmull-Rom (Ultra Sharp Bicubic)`, `Bilinear (Smooth)`, or `Nearest (Draft)`. |
 | **Edge Detail Boost** | `0.0 — 1.0` | `0.0` | Micro-contrast edge reconstruction to counteract horizontal stretch softening. |
 
