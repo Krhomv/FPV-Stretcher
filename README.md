@@ -27,16 +27,23 @@ Designed for FPV drones, action cameras (GoPro, DJI, Insta360, Walksnail, HDZero
 
 ## 📦 Installation
 
-> **Note on DaVinci Resolve Fuses:**
-> DaVinci Resolve's GPU kernel compiler requires `.fuse` files to be placed physically on disk in the `Fuses` folder (double-clicking a `.drfx` only installs Edit page templates, but does not unpack Fuses). Use any of the simple options below:
+Choose the installation method that fits your workflow:
 
-### Option 1: One-Click Script Installer (Easiest)
+### ⭐ Option 1: Drag & Drop into Fusion (Recommended — No Terminal, Works on Win/Mac/Linux)
+1. Open **DaVinci Resolve** and switch to the **Fusion** page.
+2. Drag and drop **[`Install.lua`](Install.lua)** directly from your file browser into the Fusion node editor or viewport.
+3. A confirmation popup will appear once installation is complete.
+4. Restart DaVinci Resolve.
+
+### ⚙️ Option 2: One-Click OS Scripts
 - **Windows**: Double-click `install.bat`
 - **macOS / Linux**: Run `bash install.sh` (or `python3 install.py`)
 
-*(This automatically copies both `FPV_Stretcher.fuse` and `FPV_Stretcher.drfx` to your local DaVinci Resolve support directories).*
+### ⚡ Option 3: Reactor Package Manager
+For users of [Reactor (We Suck Less)](https://www.steakunderwater.com/wesuckless/):
+- Include [`FPV_Stretcher.atom`](FPV_Stretcher.atom) in your Reactor repository path to install with one click.
 
-### Option 2: Manual Installation
+### 📁 Option 4: Manual Installation
 1. Copy **`FPV_Stretcher.fuse`** to the **`Fuses`** directory:
    - **Windows**: `%APPDATA%\Blackmagic Design\DaVinci Resolve\Support\Fusion\Fuses\`
    - **macOS**: `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Fuses/`

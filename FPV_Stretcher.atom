@@ -1,0 +1,12 @@
+Atom {
+    Name = "FPV Stretcher",
+    Category = "Fuses/Transform",
+    Author = "Krhom",
+    Version = 1.0,
+    Date = "2026-08-16",
+    Description = [[Dynamic 4:3 to 16:9 widescreen aspect converter inspired by GoPro SuperView. Converts 4:3 video into 16:9 with smooth non-linear horizontal stretch, center geometry protection, fisheye correction, and edge detail boost.]],
+    Deploy = {
+        "Fuses/FPV_Stretcher.fuse",
+        "Templates/Edit/Effects/Krhom's Shop/FPV Stretcher.setting",
+    },
+}
